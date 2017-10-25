@@ -8,11 +8,7 @@
 	font-style: normal;
 }
 
-
-.main{
-    width: 316px;
-    margin-left: auto;
-    margin-right: auto;
+html{
     background: rgba(248,80,50,1);
     background: -moz-radial-gradient(center, ellipse cover, rgba(248,80,50,1) 0%, rgba(212,39,43,1) 53%, rgba(184,7,38,1) 94%, rgba(180,2,37,1) 100%);
     background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(248,80,50,1)), color-stop(53%, rgba(212,39,43,1)), color-stop(94%, rgba(184,7,38,1)), color-stop(100%, rgba(180,2,37,1)));
@@ -21,6 +17,19 @@
     background: -ms-radial-gradient(center, ellipse cover, rgba(248,80,50,1) 0%, rgba(212,39,43,1) 53%, rgba(184,7,38,1) 94%, rgba(180,2,37,1) 100%);
     background: radial-gradient(ellipse at center, rgba(248,80,50,1) 0%, rgba(212,39,43,1) 53%, rgba(184,7,38,1) 94%, rgba(180,2,37,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#b40225', GradientType=1 );
+}
+
+body{
+    /*width: 316px;*/
+    /*margin-left: auto;
+    margin-right: auto;*/
+}
+
+.main{
+    width: 320px;
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 *{
@@ -96,6 +105,16 @@
 
 .wrapper_portada{
     height: 307px !important;
+}
+
+.wrapper_block_white{
+    height: 408px;
+    background-color: #FFFFFF;
+    width: 320px;
+}
+
+.wrapper_block_space{
+    height: 142px
 }
 
 .wrapper_form{
@@ -243,8 +262,12 @@
 }
 
 .dropdown-item-color{
-    background-color: #eeeeee !important;
+    /*background-color: #eeeeee !important;*/
 }
+
+.dropdown-item:hover{
+    background-color: #eeeeee !important;
+}    
 
 .dropdown-item a{
     color: #000000 !important;
@@ -448,6 +471,7 @@
     margin-right: auto;
     display: inline-block;
 }
+
 .content_button button{
     margin-left: auto;
     margin-right: auto;
