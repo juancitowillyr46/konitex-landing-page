@@ -10,6 +10,30 @@
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
+    <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div id="slider">
+                <a class="modal-closed">Cerrar</a>
+                <a href="#" class="control_next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                <a href="#" class="control_prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+                <ul>
+                    <li>
+                        <img src="/assets/images/slider_01_03.png" alt="">
+                    </li>
+                    <li>
+                        <img src="/assets/images/slider_01_03.png" alt="">
+                    </li>
+                    <li>
+                        <img src="/assets/images/slider_01_03.png" alt="">
+                    </li>
+                    <li>
+                        <img src="/assets/images/slider_01_03.png" alt="">
+                    </li>
+                </ul>  
+            </div>
+        </div>
+    </div>
     <div class="main">
         <section class="hero">
             <div class="hero-body">
@@ -33,7 +57,7 @@
                                 <img src="/assets/images/icon_01.png" alt="" align="top">
                             </span>
                             <span class="wrapper_link_right">
-                                <a href="#">Ver fotos</a>
+                                <a id="showModal" href="#" class="modal-button" data-target="modal">Ver fotos</a>
                             </span>
                         </div>
                     </div>
@@ -210,6 +234,8 @@
             </div>
         </section>
     </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="/assets/js/main.js" type=""></script>
+    
 </body>
 </html>

@@ -142,7 +142,6 @@ body{
 
 }
 
-
 .wrapper_info_links .wrapper_link_right{
     border-bottom: 1px solid #FFFFFF;
     display: inline-block;
@@ -259,10 +258,6 @@ body{
 .dropdown-divider{
   margin: 0px;  
   background-color: #dbdbdb;
-}
-
-.dropdown-item-color{
-    /*background-color: #eeeeee !important;*/
 }
 
 .dropdown-item:hover{
@@ -499,3 +494,96 @@ body{
     background-image: -o-linear-gradient(top, #e2002e, #6e0016);
     background-image: linear-gradient(to bottom, #e2002e, #6e0016);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#e2002e, endColorstr=#6e0016);
 }
+
+/* --- Basic Slider --- */
+.modal-content{
+    overflow: unset !important;
+}
+
+.modal-closed{
+    position: absolute;
+    color: #FFFFFF;
+    background-color: #000000;
+    z-index: 1;
+    margin-left: 248px;
+    font-size: 12px;
+    width: 49px;
+    height: 19px;
+    text-align: center;
+}
+
+.modal-closed:hover {
+    color: #FFFFFF;
+}
+
+
+  #slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #slider ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 200px;
+    list-style: none;
+    
+  }
+  
+  #slider ul li {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 293px;
+    height: 398px;
+    background: #ccc;
+    text-align: center;
+    line-height: 300px;
+    
+  }
+  
+  a.control_prev, a.control_next {
+    position: absolute;
+    top: 45%;
+    z-index: 999;
+    display: block;
+    width: 26px;
+    height: 47px;
+    background: #7d7d7d;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  a.control_prev:hover, a.control_next:hover {
+    background-color: #000000;
+  }
+  
+  a.control_prev {
+    border-radius: 0 6px 6px 0;
+    margin-left: 1px;
+    padding-left: 5px;
+  }
+  
+  a.control_next {
+    padding-left: 9px;
+    right: 0;
+    border-radius: 6px 0 0 6px;
+    margin-right: 1px;
+  }
+  
+  .slider_option {
+    position: relative;
+    margin: 10px auto;
+    width: 160px;
+    font-size: 18px;
+  }
+  
