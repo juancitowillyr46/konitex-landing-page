@@ -26,10 +26,15 @@ body{
 }
 
 .main{
-    width: 320px;
-    width: 320px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.wrapper_is_mobile{
+    width: 320px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 *{
@@ -110,7 +115,7 @@ body{
 .wrapper_block_white{
     height: 408px;
     background-color: #FFFFFF;
-    width: 320px;
+    width: 100%;
 }
 
 .wrapper_block_space{
