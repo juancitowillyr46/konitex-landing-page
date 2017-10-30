@@ -1,38 +1,72 @@
-const button = document.querySelector('.button');
-const dropdown = document.querySelector('.dropdown');
+new Vue({
+    el: '#main',
+    data: {
+        amounts: [1,2,3,4,5,6,7,8,9,10],
+        size_adults: ['S','M','L','XL'],
+        size_boys: [6,8,10,12],
+        products: [ 
+           {'price': 59.90, 'name': 'Camiseta Perú'},
+           {'price': 44.90, 'name': 'Camiseta Básica'},
+           {'price': 29.90, 'name': 'Camiseta Chulita'}
+        ],
+        size_adult: 0,
+        color_adult: 0,
+        amount_adult:0,
+        size_boy: 0,
+        color_boy: 0,
+        amount_boy:0,
+        default: 0,
+        selectValue: '',
+        selectText: '',
+        amount_total:0
+    },
+    created: function(){
+        let product =  this.products[this.default];
+        this.selectValue = product.price.toFixed(2);
+        this.selectText  = product.name;
+    },
+    methods:{
+        selectDropdown: function(){
+            
+            const button = document.querySelector('.button');
+            const dropdown = document.querySelector('.dropdown');
 
-button.addEventListener('click', () => {
-  dropdown.classList.toggle('is-open');
+            dropdown.classList.toggle('is-open');
+            
+        },
+        selectProduct: function(index){
+
+            let product    = this.products[index];
+            const dropdown = document.querySelector('.dropdown');
+
+            this.selectValue = product.price.toFixed(2);
+            this.selectText  = product.name;
+            dropdown.classList.toggle('is-open');
+            
+        },
+        calculate: function(){
+            
+            var amount = this.selectValue;
+
+            this.amount_total = amount * (this.amount_adult + this.amount_boy);     
+
+        }
+    }
 });
 
-
-$(".showModal").click(function() {
-  $(".modal").addClass("is-active");  
+$(".showModal").click(function () {
+    $(".modal").addClass("is-active");  
 });
 
-$(".modal-closed").click(function() {
-   $(".modal").removeClass("is-active");
+$(".modal-closed").click(function () {
+    $(".modal").removeClass("is-active");
 });
-
 
 jQuery(document).ready(function ($) {
 
-    /*var viewportWidth = $(window).width();
-    var viewportHeight = $(window).height();*/
-    var slideWidth = $('#slider ul li').width();
+    var slideWidth  = $('#slider ul li').width();
     var slideHeight = $('#slider ul li').height();
-
-    /*$( window ).resize(function() {
-        if(viewportWidth <= 800){
-            slideWidth = 493.44;
-            slideHeight = 670.97;
-        } else {
-            slideWidth = 293;
-            slideHeight = 398;
-        }
-    });*/
-
-    var slideCount = $('#slider ul li').length;
+    var slideCount  = $('#slider ul li').length;
 
     var sliderUlWidth = slideCount * slideWidth;
     
@@ -40,33 +74,34 @@ jQuery(document).ready(function ($) {
     
     $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
     
-      $('#slider ul li:last-child').prependTo('#slider ul');
+    $('#slider ul li:last-child').prependTo('#slider ul');
   
-      function moveLeft() {
-          $('#slider ul').animate({
-              left: + slideWidth
-          }, 200, function () {
-              $('#slider ul li:last-child').prependTo('#slider ul');
-              $('#slider ul').css('left', '');
-          });
-      };
-  
-      function moveRight() {
-          $('#slider ul').animate({
-              left: - slideWidth
-          }, 200, function () {
-              $('#slider ul li:first-child').appendTo('#slider ul');
-              $('#slider ul').css('left', '');
-          });
-      };
-  
-      $('a.control_prev').click(function () {
-          moveLeft();
-      });
-  
-      $('a.control_next').click(function () {
-          moveRight();
-      });
-  
-  });    
-  
+    function moveLeft() {
+        $('#slider ul').animate({
+            left: + slideWidth
+        }, 200, function () {
+            $('#slider ul li:last-child').prependTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    function moveRight() {
+        $('#slider ul').animate({
+            left: - slideWidth
+        }, 200, function () {
+            $('#slider ul li:first-child').appendTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    $('a.control_prev').click(function () {
+        moveLeft();
+    });
+
+    $('a.control_next').click(function () {
+        moveRight();
+    });
+
+
+});
+
