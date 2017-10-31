@@ -341,7 +341,7 @@ html{
 
 @media ( max-width: 800px )  {
     .wrapper_footer{
-        display: bock;
+        display: block;
     }
 }
 
@@ -696,6 +696,7 @@ html{
     width: 286px;
     padding-top: 41px;
     padding-bottom: 41px;
+    margin-top: 380px;
 }
 
 .footer_left{
