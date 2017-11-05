@@ -21,23 +21,23 @@ new Vue({
         amount_total:0
     },
     created: function(){
-        let product =  this.products[this.default];
+        var product =  this.products[this.default];
         this.selectValue = product.price.toFixed(2);
         this.selectText  = product.name;
     },
     methods:{
         selectDropdown: function(){
             
-            const button = document.querySelector('.button');
-            const dropdown = document.querySelector('.dropdown');
+            var button = document.querySelector('.button');
+            var dropdown = document.querySelector('.dropdown');
 
             dropdown.classList.toggle('is-open');
             
         },
         selectProduct: function(index){
 
-            let product    = this.products[index];
-            const dropdown = document.querySelector('.dropdown');
+            var product    = this.products[index];
+            var dropdown = document.querySelector('.dropdown');
 
             this.selectValue = product.price.toFixed(2);
             this.selectText  = product.name;

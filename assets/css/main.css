@@ -515,20 +515,42 @@ html{
 .wrapper_type_content{
     padding-top: 20px;
     padding-bottom: 0px;
-    padding-left: 18px;
-    padding-right: 18px;
-    width: 286px;
+    padding-left: 7px;
+    padding-right: 7px;
+    width: 286px !important;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px !important;
     margin-bottom: 0px !important;
 }
 
+@media ( max-width: 800px )  {
+    
+    .wrapper_type_content{
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+    
+        
+}
+
 .wrapper_type_content .wrapper_type{
     padding-top: 0px;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 0px;
+    padding-right: 0px;
+
 } 
+
+@media ( max-width: 800px )  {
+    
+    .wrapper_type_content .wrapper_type{
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    } 
+    
+        
+}
 
 .wrapper_type_content{
     color:#7a7a7a !important;
@@ -548,7 +570,17 @@ html{
     cursor: pointer;
 }
 
+.group_size_button span{
+    display: inline-block;
+    width: 26px;
+    max-width: 26px;
+    height: 26px;
+    max-height: 26px;
+    margin-left: 5px;
+}
+
 .group_size_button label{
+    display: inline-block;
     border: 1px #7a7a7a solid;
     width: 26px;
     height: 26px;
@@ -557,10 +589,10 @@ html{
     font-size: 12.92px;
     display: inline-grid;
     text-align: center;
-    margin-left: 5px;
+    
 }
 
-.group_size_button :nth-child(2){
+.group_size_button span:nth-child(1){
     margin-left: 0px;
 }
 
@@ -580,6 +612,12 @@ html{
     width: 32px;
     height: 32px;
     cursor: pointer;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -khtml-border-radius: 50%;
+    display: block;
 }
 
 .group_color_button label{
@@ -594,21 +632,30 @@ html{
     text-align: center;
     margin-right: 10px;
     border: 2px solid #000000;
-    border-radius: 90px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -khtml-border-radius: 50%;
+    display: inline-block;
 }
 
 .group_color_button input[type='radio']:checked + label{
     color:#000000;
     border: 2px solid #FFFFFF;
-    border-radius: 90px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -khtml-border-radius: 50%;
     width: 32px;
     height: 32px;
 }
 
 .size_item_title{
     padding: 0px;
-    padding-left: 14px;
-    padding-right: 14px;
+    padding-left: 0px;
+    padding-right: 0px;
     padding-top: 6px;
     padding-bottom: 0px;
 }
@@ -617,14 +664,29 @@ html{
     font-size: 18.48px;color: #FFFFFF;
 }
 
+
 .size_item_detail_left, .size_item_detail_right{
-    padding-top: 6px;
-    padding-bottom: 0px;
+    /*padding-top: 6px;
+    padding-bottom: 0px;*/
+
+    padding: 6px 0 0 0; 
+    float: left;
 }
 
-.size_item_detail_right{
-    padding-left: 0px !important;
+.size_item_detail_left{
+    width: 120px !important;
+    margin-right: 48px !important;
 }
+
+
+.size_item_detail_right{
+    padding-left: 0px;
+}
+/*.size_item_detail_right{
+    padding-left: 0px !important;
+    max-width: 86px !important;
+    width: 86px !important;
+}*/
 
 .size_quanty{
     width: 98px;
@@ -639,19 +701,36 @@ html{
 }
 
 .size_item_detail_center{
-    padding-top: 16px;
-    padding-bottom: 18px;
+    /*padding-top: 16px;
+    padding-bottom: 18px;*/
+    padding: 8px 0 8px 0;
 }
 
 .size_item_divider{
     margin: 0px;
     background-color: #232323;
-    height: 1px;
+    height: 2px;
     margin-top: 18px;
 }
 
 .size_content_boys, .size_content_adult{
     margin-bottom: 0px !important;
+    width: 272px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media ( max-width: 800px )  {
+    
+    .size_content_boys, .size_content_adult{
+        width: 252px !important;
+    } 
+    
+        
+}
+
+.size_content_adult, .size_content_boys{
+    display: block !important;
 }
 
 .size_content_adult .size_item_detail_center{
@@ -688,6 +767,21 @@ html{
 .content_button{
     padding-top: 18px;
     padding-bottom: 18px;
+    width: 272px !important;
+    display: inline-block !important;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+@media ( max-width: 800px )  {
+    
+    .content_button{
+        width: 252px !important;
+        margin-left: 0px;
+        margin-right: 0px;
+    } 
+    
+        
 }
 
 .wrapper_footer{
@@ -712,10 +806,18 @@ html{
     display: inline-block;
 }
 
+@media ( max-width: 800px )  {
+    
+    .content_button button{
+        width: 252px !important;
+    }  
+        
+}
+
 .content_button button{
     margin-left: auto;
     margin-right: auto;
-    width: 181.75px;
+    width: 198px;
     height: 41.53px;
     font-family: 'Gotham' !important; 
     font-weight: bold; 
