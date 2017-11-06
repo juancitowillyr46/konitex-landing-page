@@ -19,7 +19,8 @@ new Vue({
         selectValue: '',
         selectText: '',
         amount_total:0,
-        orders:[]
+        orders:[],
+        firstName: ''
     },
     created: function(){
         var product =  this.products[this.default];
@@ -73,10 +74,12 @@ new Vue({
 
         },
         finalStep: function(){
-            document.getElementById("wrapper_footer").style.height = '142px';
+            
             document.getElementById("nextStep").style.display = 'none';
             document.getElementById("finalStep").style.display = 'block';
             document.getElementById("main").style.height = '126px';
+            document.getElementById("wrapper_footer").style.height = '142px';
+            document.getElementById("wrapper_footer").style.marginTop = '0px';
             
         }
     }

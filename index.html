@@ -254,7 +254,7 @@
 
                             <div class="field_step_2">
                                 <label for="">Nombres</label>
-                                <input type="text">
+                                <input type="text" v-model="firstName">
                             </div>
 
                             <div class="field_step_2">
@@ -277,7 +277,7 @@
                     </form> 
 
                     <form action="" id="finalStep" class="nextStep">
-                        <h2>¡Gracias!</h2>
+                        <h2>¡Gracias {{ firstName }}!</h2>
                         <p>Tu pedido fue enviado<br>pronto nos contactaremos contigo.</p>
                     </form>
                         
