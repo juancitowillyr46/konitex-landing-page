@@ -301,8 +301,6 @@ html{
     }
 }
 
-
-
 .wrapper_form{
     width: 309px;
     border-radius: 10px;
@@ -316,6 +314,117 @@ html{
     margin-right: auto;
     top: 171px;
     display: block;
+}
+
+.table_content{
+    padding-bottom: 12px;
+}
+
+#nextStep{
+    display: none; 
+    padding-top: 12px;
+}
+
+#nextStep{
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 22px;
+    padding-top: 22px;
+}
+
+#nextStep h2{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    font-family: Arial;
+}
+
+#nextStep p{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    color: #000000;
+    text-align: center;
+    font-family: Arial;
+}
+
+.table_title{
+    background-color: #d4d4d4;
+    font-size: 11px;
+    color: #000000;
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.table_items{
+    font-size: 11px;
+    background-color: #FFFFFF;
+}
+
+.table_items ul{
+    list-style: disc;
+    margin-left: 30px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-right: 0px;
+    padding-bottom: 10px;
+}
+.table_items ul li{
+    text-align: left;
+}
+
+.table_items .title{
+    color: #616161;
+    font-weight: bold;
+    font-size: 11px;
+    display: block;
+    text-align: left;
+}
+
+.table_items .subtitle{
+    color: #808080;
+    font-size: 11px;
+    display: block;
+    text-align: left;
+    margin-bottom: 0px !important;
+    padding-bottom: 3px;
+    line-height: 10px;
+}
+
+#nextStep label{
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 5px;
+    padding-bottom: 0px;
+}
+
+#nextStep p{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    color: #000000;
+    text-align: center;
+    font-family: Arial;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+#nextStep input{
+    width: 100%;
+    border-radius: 4px;
+    border: #b4b4b4 1px solid;
+    height: 37px;
+    padding-left: 6px;
+    padding-right: 6px;
 }
 
 @media ( max-width: 800px )  {

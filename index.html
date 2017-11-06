@@ -119,7 +119,7 @@
                 </div>
                 <div class="container wrapper_block_space wrapper_is_mobile"></div>
                 <div id="main" class="container wrapper_form">
-                    <form action="#">
+                    <form action="#" id="step01">
                         <div class="wrapper_dropdown">
                             <div class="dropdown-trigger">
                                 <button class="button select_button" @click="selectDropdown" aria-haspopup="true" aria-controls="dropdown-menu2" type="button">
@@ -226,7 +226,7 @@
                                         </div>
                                     </div>
                                     <div class="columns is-multiline is-mobile content_button">
-                                            <button>LO QUIERO!</button>
+                                            <button type="button" @click="nexStep">LO QUIERO!</button>
                                     </div>    
 
                                 </article>
@@ -236,7 +236,53 @@
                         </div>
                         <br>
                     </form>
-                    
+                    <form action="#" id="nextStep">
+                        <h2>Complete el formulario</h2>
+                        <p>Llena los siguientes campos para<br>contactarnos contigo</p>
+                        <div>
+                            <div class="table_content">
+                                <div class="table_title">Resumen de tu pedido</div>
+                                <div class="table_items">
+                                    <ul>
+                                        <li>
+                                            <span class="title">Tipo de polo 1</span> 
+                                            <span class="subtitle">Adultos: 10 Polos, talla L, Color Blanco</span> 
+                                        </li>
+                                        <li>
+                                            <span class="title">Tipo de polo 1</span> 
+                                            <span class="subtitle">Adultos: 10 Polos, talla L, Color Blanco</span> 
+                                        </li>
+                                        <li>
+                                            <span class="title">Tipo de polo 1</span> 
+                                            <span class="subtitle">Adultos: 10 Polos, talla L, Color Blanco</span> 
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="">Nombres</label>
+                                <input type="text">
+                            </div>
+
+                            <div>
+                                <label for="">Apellidos</label>
+                                <input type="text">
+                            </div>
+                            <div>
+                                <label for="">Correo electrónico</label>
+                                <input type="text">
+                            </div>
+                            <div>
+                                <label for="">Teléfono cel</label>
+                                <input type="text">
+                            </div>
+
+                            <div class="content_button">
+                                <button disabled="disabled">ENVIAR</button>
+                            </div>
+                        </div>
+                    </form> 
                         
                 </div>
                 <div class="container wrapper_block_white"></div>

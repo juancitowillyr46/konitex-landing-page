@@ -50,6 +50,13 @@ new Vue({
 
             this.amount_total = amount * (this.amount_adult + this.amount_boy);     
 
+        },
+        nexStep: function(){
+
+            document.getElementById("main").style.backgroundColor = '#eeeeee';
+            document.getElementById("step01").style.display = 'none';
+            document.getElementById("nextStep").style.display = 'block';
+
         }
     }
 });
