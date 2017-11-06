@@ -18,7 +18,8 @@ new Vue({
         default: 0,
         selectValue: '',
         selectText: '',
-        amount_total:0
+        amount_total:0,
+        orders:[]
     },
     created: function(){
         var product =  this.products[this.default];
@@ -27,12 +28,11 @@ new Vue({
     },
     methods:{
         selectDropdown: function(){
-            
+    
             var button = document.querySelector('.button');
             var dropdown = document.querySelector('.dropdown');
-
             dropdown.classList.toggle('is-open');
-            
+
         },
         selectProduct: function(index){
 
@@ -42,6 +42,8 @@ new Vue({
             this.selectValue = product.price.toFixed(2);
             this.selectText  = product.name;
             dropdown.classList.toggle('is-open');
+
+            this.calculate();
             
         },
         calculate: function(){
@@ -57,10 +59,24 @@ new Vue({
             document.getElementById("main").style.height = '650px';
             document.getElementById("content_contact").style.display = 'none';
             
-            //height: 650px;
             document.getElementById("step01").style.display = 'none';
             document.getElementById("nextStep").style.display = 'block';
 
+            this.orders = {
+                'items':[
+                    {'product':this.selectText, 'type': 'Adulto', 'amount': this.amount_adult, 'size': this.size_adult, 'color': this.color_adult },
+                    {'product':this.selectText, 'type': 'Niño', 'amount': this.amount_boy, 'size': this.size_boy, 'color': this.color_boy },
+                ]
+            }
+
+            //console.log(this.orders);
+
+        },
+        finalStep: function(){
+            document.getElementById("nextStep").style.display = 'none';
+            document.getElementById("finalStep").style.display = 'block';
+            document.getElementById("main").style.height = '126px';
+            
         }
     }
 });

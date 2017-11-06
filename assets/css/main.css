@@ -27,6 +27,12 @@ html{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
 
 .main{
     width: 100%;
@@ -320,7 +326,7 @@ html{
     padding-bottom: 18px;
 }
 
-#nextStep{
+.nextStep{
     display: none; 
     padding-left: 18px;
     padding-right: 18px;
@@ -328,14 +334,14 @@ html{
     padding-top: 14px;
 }
 
-#nextStep{
+.nextStep{
     padding-left: 18px;
     padding-right: 18px;
     padding-bottom: 22px;
     padding-top: 22px;
 }
 
-#nextStep h2{
+.nextStep h2{
     font-size: 18px;
     font-style: normal;
     font-weight: bold;
@@ -345,7 +351,7 @@ html{
     padding-bottom: 5px;
 }
 
-#nextStep p{
+.nextStep p{
     font-size: 14px;
     font-style: normal;
     font-weight: normal;
@@ -406,7 +412,7 @@ html{
     line-height: 10px;
 }
 
-#nextStep label{
+.nextStep label{
     display: block;
     font-size: 14px;
     font-weight: bold;
@@ -416,7 +422,7 @@ html{
     padding-bottom: 5px;
 }
 
-#nextStep p{
+.nextStep p{
     font-size: 14px;
     font-style: normal;
     font-weight: normal;
@@ -427,7 +433,7 @@ html{
     padding-bottom: 10px;
 }
 
-#nextStep input{
+.nextStep input{
     width: 100%;
     border-radius: 5px;
     border: #b4b4b4 1px solid;
@@ -840,6 +846,10 @@ html{
     width: 272px !important;
     margin-left: auto;
     margin-right: auto;
+}
+
+.finalStep{
+    display: none;
 }
 
 @media ( max-width: 800px )  {
