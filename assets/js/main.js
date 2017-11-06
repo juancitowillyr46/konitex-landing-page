@@ -73,6 +73,7 @@ new Vue({
 
         },
         finalStep: function(){
+            document.getElementById("wrapper_footer").style.height = '142px';
             document.getElementById("nextStep").style.display = 'none';
             document.getElementById("finalStep").style.display = 'block';
             document.getElementById("main").style.height = '126px';
