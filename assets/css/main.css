@@ -317,17 +317,20 @@ html{
 }
 
 .table_content{
-    padding-bottom: 12px;
+    padding-bottom: 18px;
 }
 
 #nextStep{
     display: none; 
-    padding-top: 12px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 10px;
+    padding-top: 14px;
 }
 
 #nextStep{
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 18px;
+    padding-right: 18px;
     padding-bottom: 22px;
     padding-top: 22px;
 }
@@ -339,6 +342,7 @@ html{
     color: #000000;
     text-align: center;
     font-family: Arial;
+    padding-bottom: 5px;
 }
 
 #nextStep p{
@@ -354,17 +358,21 @@ html{
     background-color: #d4d4d4;
     font-size: 11px;
     color: #000000;
-    padding-left: 17px;
-    padding-right: 17px;
+    padding-left: 11px;
+    padding-right: 11px;
     padding-top: 7px;
     padding-bottom: 7px;
     font-style: normal;
     font-weight: bold;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .table_items{
     font-size: 11px;
     background-color: #FFFFFF;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .table_items ul{
@@ -375,6 +383,7 @@ html{
     margin-right: 0px;
     padding-bottom: 10px;
 }
+
 .table_items ul li{
     text-align: left;
 }
@@ -404,7 +413,7 @@ html{
     color: #000000;
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 5px;
-    padding-bottom: 0px;
+    padding-bottom: 5px;
 }
 
 #nextStep p{
@@ -420,7 +429,7 @@ html{
 
 #nextStep input{
     width: 100%;
-    border-radius: 4px;
+    border-radius: 5px;
     border: #b4b4b4 1px solid;
     height: 37px;
     padding-left: 6px;
@@ -435,6 +444,10 @@ html{
         width: 286px;
     }
     
+}
+
+.field_step_2{
+    padding-bottom: 6px;
 }
 
 .wrapper_form form{

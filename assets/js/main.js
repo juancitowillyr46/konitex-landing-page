@@ -54,6 +54,10 @@ new Vue({
         nexStep: function(){
 
             document.getElementById("main").style.backgroundColor = '#eeeeee';
+            document.getElementById("main").style.height = '650px';
+            document.getElementById("content_contact").style.display = 'none';
+            
+            //height: 650px;
             document.getElementById("step01").style.display = 'none';
             document.getElementById("nextStep").style.display = 'block';
 
