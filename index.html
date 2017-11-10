@@ -236,7 +236,7 @@
                         </div>
                         <br>
                     </form>
-                    <form action="#" id="nextStep" class="nextStep">
+                    <form method="POST" action="#" id="nextStep" class="nextStep">
                         <h2>Complete el formulario</h2>
                         <p>Llena los siguientes campos para<br>contactarnos contigo</p>
                         <div>
@@ -253,21 +253,21 @@
                             </div>
 
                             <div class="field_step_2">
-                                <label for="">Nombres</label>
-                                <input type="text" v-model="firstName">
+                                <label for="firstname">Nombres</label>
+                                <input type="text" id="firstname" v-model="firstname">
                             </div>
 
                             <div class="field_step_2">
-                                <label for="">Apellidos</label>
-                                <input type="text">
+                                <label for="lastname">Apellidos</label>
+                                <input type="text" id="lastname" v-model="lastname">
                             </div>
                             <div class="field_step_2">
-                                <label for="">Correo electrónico</label>
-                                <input type="text">
+                                <label for="email">Correo electrónico</label>
+                                <input type="text" id="email" v-model="email">
                             </div>
                             <div class="field_step_2">
-                                <label for="">Teléfono cel</label>
-                                <input type="text">
+                                <label for="phone">Teléfono cel</label>
+                                <input type="text" id="phone" v-model="phone">
                             </div>
 
                             <div class="content_button">
@@ -277,7 +277,7 @@
                     </form> 
 
                     <form action="" id="finalStep" class="nextStep">
-                        <h2>¡Gracias {{ firstName }}!</h2>
+                        <h2>¡Gracias {{ firstname }}!</h2>
                         <p>Tu pedido fue enviado<br>pronto nos contactaremos contigo.</p>
                     </form>
                         
@@ -301,6 +301,7 @@
     
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="/assets/js/main.js"></script>
     
 </body>

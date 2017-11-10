@@ -20,12 +20,17 @@ new Vue({
         selectText: '',
         amount_total:0,
         orders:[],
-        firstName: ''
+        firstname: '',
+        lastname: '',
+        email: '',
+        phone: ''
     },
-    created: function(){
+    created: function() {
+
         var product =  this.products[this.default];
         this.selectValue = product.price.toFixed(2);
         this.selectText  = product.name;
+
     },
     methods:{
         selectDropdown: function(){
@@ -59,7 +64,6 @@ new Vue({
             document.getElementById("main").style.backgroundColor = '#eeeeee';
             document.getElementById("main").style.height = '650px';
             document.getElementById("content_contact").style.display = 'none';
-            
             document.getElementById("step01").style.display = 'none';
             document.getElementById("nextStep").style.display = 'block';
 
@@ -70,16 +74,33 @@ new Vue({
                 ]
             }
 
-            //console.log(this.orders);
-
         },
         finalStep: function(){
             
-            document.getElementById("nextStep").style.display = 'none';
+            var self = this;
+
+            axios.post('/services/mail.php', {
+                orders: self.orders,
+                contact: {
+                    'firstname': self.firstname,
+                    'lastname': self.lastname,
+                    'email': self.email,
+                    'phone': self.phone
+                },
+                amount_total: self.amount_total
+            })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+            /*document.getElementById("nextStep").style.display = 'none';
             document.getElementById("finalStep").style.display = 'block';
             document.getElementById("main").style.height = '126px';
             document.getElementById("wrapper_footer").style.height = '142px';
-            document.getElementById("wrapper_footer").style.marginTop = '0px';
+            document.getElementById("wrapper_footer").style.marginTop = '0px';*/
             
         }
     }

@@ -442,6 +442,11 @@ button:focus {
     padding-right: 6px;
 }
 
+.nextStep input:focus{
+    border-color: #3b74ca;
+    box-shadow: 0 0 10px #3b74ca;
+}
+
 @media ( max-width: 800px )  {
     .wrapper_form{
         display: block;
@@ -745,7 +750,7 @@ button:focus {
     -moz-border-radius: 50%;
     border-radius: 50%;
     -khtml-border-radius: 50%;
-    display: block;
+    display: inline-block;
 }
 
 .group_color_button label{
