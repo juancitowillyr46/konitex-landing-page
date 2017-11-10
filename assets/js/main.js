@@ -91,16 +91,17 @@ new Vue({
             })
             .then(function (response) {
                 console.log(response);
+                document.getElementById("nextStep").style.display = 'none';
+                document.getElementById("finalStep").style.display = 'block';
+                document.getElementById("main").style.height = '126px';
+                document.getElementById("wrapper_footer").style.height = '142px';
+                document.getElementById("wrapper_footer").style.marginTop = '0px';
             })
             .catch(function (error) {
                 console.log(error);
             });
 
-            /*document.getElementById("nextStep").style.display = 'none';
-            document.getElementById("finalStep").style.display = 'block';
-            document.getElementById("main").style.height = '126px';
-            document.getElementById("wrapper_footer").style.height = '142px';
-            document.getElementById("wrapper_footer").style.marginTop = '0px';*/
+
             
         }
     }
